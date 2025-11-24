@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Voting Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Page -->
+  <div id="loginPage" class="page active">
+    <div class="login-container">
+      <h1>Welcome to the Voting System</h1>
+      <button id="loginBtn" class="btn">Login</button>
+    </div>
+  </div>
+
+  <!-- Main Page -->
+  <div id="mainPage" class="page">
+    <!-- Header / Navbar -->
+    <header>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#" class="tablink" data-tab="homeTab">Home</a></li>
+          <li><a href="#" class="tablink" data-tab="aboutTab">About</a></li>
+          <li><a href="#" class="tablink" data-tab="votingTab">Voting</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Tab: Candidate Info -->
+    <section id="homeTab" class="tab active">
+      <div class="tab-content">
+        <h2>Candidates</h2>
+        <div id="homeCandidates" class="home-candidates"></div>
+      </div>
+    </section>
+
+    <!-- About Tab -->
+    <section id="aboutTab" class="tab">
+      <div class="tab-content">
+        <h2>About This Website</h2>
+        <p>This website is designed to **simulate a blockchain-based voting system**. Users can see information about candidates, vote interactively, and see live vote results in a secure, fun, and engaging frontend experience.</p>
+        <p>The purpose is to demonstrate a **secure, transparent, and interactive voting system** interface using only frontend technologies. Perfect for learning or demo purposes.</p>
+      </div>
+    </section>
+
+    <!-- Voting Tab -->
+    <section id="votingTab" class="tab">
+      <div class="tab-content">
+        <h2>Vote Your Candidate</h2>
+        <div id="candidatesContainer" class="candidates"></div>
+        <div id="voteStatus"></div>
+        <h3>Results:</h3>
+        <div id="results"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
